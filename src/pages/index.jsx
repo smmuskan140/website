@@ -24,6 +24,7 @@ export default function Home() {
   useEffect(() => {
     setRandomProjects(projects.sort(() => 0.5 - Math.random()).slice(0, 3))
   }, [])
+
   return (
     <>
       <Head>
@@ -34,8 +35,8 @@ export default function Home() {
       <Container.Outer className="mt-9 relative">
         <div className="relative">
 
-          {/* Background Image */}
-          <div className=" hidden  absolute md:block z-0 bg-[url('../images/background.png')] dark:bg-[url('../images/background-dark.png')] right-0 top-[-230px] w-full h-[-webkit-fill-available] bg-cover bg-center mb-20"></div>
+          {/* Background Image (no alt needed – decorative) */}
+          <div className="hidden absolute md:block z-0 bg-[url('../images/background.png')] dark:bg-[url('../images/background-dark.png')] right-0 top-[-230px] w-full h-[-webkit-fill-available] bg-cover bg-center mb-20"></div>
 
           {/* Main Content */}
           <div className="flex flex-col sm:flex-row relative z-10 mb-8">
@@ -45,7 +46,7 @@ export default function Home() {
                 width={320}
                 height={300}
                 className="mx-auto scale-110 m-4"
-                alt="AOSSIE Logo"
+                alt="AOSSIE main open source circular logo with gradient colors"
               />
             </div>
             <div className="mt-10 flex-1 sm:ml-10 lg:ml-0 lg:mt-0 pt-8">
@@ -59,50 +60,52 @@ export default function Home() {
                   provides a resource-efficient channel to transfer knowledge and
                   achieve innovation and education.
                 </p>
+
                 <div className="mt-6 ml-4 flex gap-6">
                   <Link
-                    aria-label="Contact by Mail"
+                    aria-label="Send an email to AOSSIE"
                     className="text-zinc-500 transition hover:text-[#00843D] dark:text-zinc-400 dark:hover:text-yellow-400"
                     href="mailto:aossie.oss@gmail.com"
                   >
                     <FontAwesomeIcon icon={faEnvelope} size="2xl" />
                   </Link>
                   <Link
-                    aria-label="Follow on GitLab"
+                    aria-label="Visit AOSSIE on GitLab"
                     className="text-zinc-500 transition hover:text-[#00843D] dark:text-zinc-400 dark:hover:text-yellow-400"
                     href="https://gitlab.com/aossie"
                   >
                     <FontAwesomeIcon icon={faGitlab} size="2xl" />
                   </Link>
                   <Link
-                    aria-label="Follow on GitHub"
+                    aria-label="Visit AOSSIE on GitHub"
                     className="text-zinc-500 transition hover:text-[#00843D] dark:text-zinc-400 dark:hover:text-yellow-400"
                     href="https://github.com/AOSSIE-Org"
                   >
                     <FontAwesomeIcon icon={faGithub} size="2xl" />
                   </Link>
                   <Link
-                    aria-label="Join on Discord"
+                    aria-label="Join the AOSSIE Discord community"
                     className="text-zinc-500 transition hover:text-[#00843D] dark:text-zinc-400 dark:hover:text-yellow-400"
                     href="https://discord.gg/hjUhu33uAn"
                   >
                     <FontAwesomeIcon icon={faDiscord} size="2xl" />
                   </Link>
                   <Link
-                    aria-label="Follow on Twitter"
+                    aria-label="Follow AOSSIE on Twitter"
                     className="text-zinc-500 transition hover:text-[#00843D] dark:text-zinc-400 dark:hover:text-yellow-400"
                     href="https://twitter.com/aossie_org"
                   >
                     <FontAwesomeIcon icon={faTwitter} size="2xl" />
                   </Link>
                   <Link
-                    aria-label="Subscribe on YouTube"
+                    aria-label="Subscribe to the AOSSIE YouTube channel"
                     className="text-zinc-500 transition hover:text-[#00843D] dark:text-zinc-400 dark:hover:text-yellow-400"
                     href="https://www.youtube.com/@AOSSIE-Org"
                   >
                     <FontAwesomeIcon icon={faYoutube} size="2xl" />
                   </Link>
                 </div>
+
                 <div className="mt-12 mx-4 md:mx-0 md:mt-8 text-left ">
                   <Link href="/about" className="group relative inline-block text-lg">
                     <span className="relative z-10 block overflow-hidden rounded-lg border-2 border-gray-900 px-5 py-3 transition-colors duration-300 ease-in-out group-hover:text-white dark:group-hover:text-black">
@@ -122,7 +125,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Green Band with Counts */}
+          {/* Green Band with Metrics */}
           <div className="hidden bg-[#3C982C] relative dark:text-black sm:flex flex-col md:flex-row justify-between p-4 sm:p-8 px-4 sm:px-16 text-center border border-white text-white dark:bg-yellow-400 z-20">
             <div className="mb-4 sm:mb-0">
               <h6 className="text-xl">Active Projects</h6>
@@ -141,15 +144,16 @@ export default function Home() {
         </div>
       </Container.Outer>
 
-
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="space-y-10 ">
             <div className="flex text-center items-center justify-center">
-              <div className=" relative top-2 hidden h-12 w-12 translate-x-px transform items-center justify-center rounded-full bg-[#00843D] p-2 dark:bg-yellow-400 md:flex">
+
+              {/* Updated accessible icon (already done) */}
+              <div className="relative top-2 hidden h-12 w-12 translate-x-px transform items-center justify-center rounded-full bg-[#00843D] p-2 dark:bg-yellow-400 md:flex">
                 <svg
-                  aria-hidden="true"
                   role="img"
+                  aria-label="Bar chart icon representing data visualization"
                   className="scale-125 font-extrabold text-white dark:text-black"
                   viewBox="0 0 24 24"
                   width="24"
@@ -163,6 +167,7 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
+
               <div className="col-span-8 mt-3 self-center lg:col-start-2">
                 <h1 className="font-mono pl-3 text-5xl font-black capitalize tracking-tighter text-zinc-800 dark:text-white">
                   projects
@@ -170,14 +175,15 @@ export default function Home() {
               </div>
             </div>
 
-            <p className=" font-mono text-lg text-zinc-600 dark:text-zinc-400 text-center ">
+            <p className="font-mono text-lg text-zinc-600 dark:text-zinc-400 text-center">
               Our Projects, where we showcase our tech wizardry and
-              code-slinging skills!! <br></br> Be a part of our community and
+              code-slinging skills!! <br /> Be a part of our community and
               contribute to meaningful projects that are <span className="text-[#3C982C] dark:text-yellow-400">making a difference</span>.
               Explore our selection of projects and find the perfect opportunity
               to showcase your skills and <span className="text-[#3C982C] dark:text-yellow-400">make an impact</span>.
             </p>
           </div>
+
           <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:justify-evenly sm:gap-0">
             <Container.Inner>
               <div className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -186,6 +192,7 @@ export default function Home() {
                     <CardEffect
                       heading={project.name}
                       logo={project.logo}
+                      logoAlt={`${project.name} project logo`}
                       content={project.description}
                     />
                   </span>
@@ -193,6 +200,7 @@ export default function Home() {
               </div>
             </Container.Inner>
           </div>
+
           <div className="mt-12 text-center">
             <Link
               className="group relative inline-flex items-center overflow-hidden rounded-lg bg-[#00843D] px-8 py-3 text-white focus:outline-none active:bg-[#00843D] dark:bg-yellow-400 dark:text-zinc-900"
@@ -214,6 +222,7 @@ export default function Home() {
                   />
                 </svg>
               </span>
+
               <span className="font-mono font-semibold transition-all group-hover:mr-6">
                 View All Projects
               </span>
@@ -221,7 +230,6 @@ export default function Home() {
           </div>
         </div>
       </Container>
-
 
       <Container.Outer className="mt-28">
         <Banner />

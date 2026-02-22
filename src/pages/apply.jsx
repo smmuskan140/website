@@ -61,8 +61,6 @@ export default function About() {
     }
   }
 `}</style>
-
-
       </Head>
 
       <Container.Outer className="mt-20 mb-28 ">
@@ -74,38 +72,65 @@ export default function About() {
             </p>
           </div>
 
-
-
           <div className='w-full mt-8 hidden sm:block'>
             <div className='relative flex space-x-10 justify-end mt-4 md:mt-8 md:p-8'>
               <div className='line-right'></div>
+
               <div className='relative'>
-                <Image src="/ele1.svg" alt="Join us on Discord" width={170} height={170} /> {/* Adjust width and height */}
+                <Image 
+                  src="/ele1.svg" 
+                  alt="Join us on Discord icon — green/yellow circle with Discord logo" 
+                  width={170} 
+                  height={170} 
+                />
                 <p className='font-bold p-3 m-auto dark:text-white'>Join us on Discord</p>
               </div>
+
               <div className='relative'>
-                <Image src="/ele2.svg" alt="Start Contributing" width={170} height={170} /> {/* Adjust width and height */}
+                <Image 
+                  src="/ele2.svg" 
+                  alt="Start Contributing icon — list/menu symbol in green/yellow circle" 
+                  width={170} 
+                  height={170} 
+                />
                 <p className='font-bold p-3 m-auto dark:text-white'>Start Contributing</p>
               </div>
+
               <div className='relative'>
-                <Image src="/ele3.svg" alt="Choose an idea" width={170} height={170} /> {/* Adjust width and height */}
+                <Image 
+                  src="/ele3.svg" 
+                  alt="Choose an idea icon — light bulb symbol in green/yellow circle" 
+                  width={170} 
+                  height={170} 
+                />
                 <p className='font-bold p-3 m-auto dark:text-white'>Choose an idea</p>
               </div>
             </div>
 
             <div className='relative flex space-x-10 justify-start mt-4 md:mt-8 md:p-8'>
               <div className='line-left'></div>
+
               <div className='relative'>
-                <Image src="/ele4.svg" alt="Discuss with mentor" width={170} height={170} /> {/* Adjust width and height */}
+                <Image 
+                  src="/ele4.svg" 
+                  alt="Discuss with mentor icon — network/connection symbol in green/yellow circle" 
+                  width={170} 
+                  height={170} 
+                />
                 <p className='font-bold p-3 m-auto dark:text-white'>Discuss with mentor</p>
               </div>
+
               <div className='relative'>
-                <Image src="/ele5.svg" alt="Submit final application" width={170} height={170} /> {/* Adjust width and height */}
+                <Image 
+                  src="/ele5.svg" 
+                  alt="Submit final application icon — checkmark in hand inside green/yellow circle" 
+                  width={170} 
+                  height={170} 
+                />
                 <p className='font-bold p-3 m-auto dark:text-white'>Submit final application</p>
               </div>
             </div>
           </div>
-
 
           <Container.Inner className='mt-4 mx-4 md:m-16'>
             <ol className="relative border-l-2 border-gray-200 dark:border-gray-700">
@@ -140,7 +165,13 @@ export default function About() {
             </ol>
 
             <div className="mt-20 relative block rounded-3xl dark:bg-white/70 bg-zinc-400/20 p-8 pb-16 shadow-xl">
-              <Image src={GSoC} alt='gsoc' width={500} height={350} className="mx-auto" />
+              <Image 
+                src={GSoC} 
+                alt="AOSSIE Google Summer of Code program banner" 
+                width={500} 
+                height={350} 
+                className="mx-auto" 
+              />
               <div className="mt-10 flex justify-center gap-6 flex-col sm:flex-row">
                 <Link className="order-1 group relative rounded-lg inline-flex items-center overflow-hidden bg-white dark:bg-zinc-800 px-8 py-3 text-black dark:text-white focus:outline-none" href="https://summerofcode.withgoogle.com/">
                   <span className="font-mono font-semibold text-center">

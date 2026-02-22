@@ -25,7 +25,6 @@ function Article({ article, currentYear }) {
           display: 'flex',
           flexDirection: 'column',
           transition: 'background-color 0.3s ease',
-
         }}
       >
         <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
@@ -58,10 +57,7 @@ function Article({ article, currentYear }) {
         <CardActions sx={{ justifyContent: 'center' }}>
           <Link href={`/ideas/${currentYear}/${article.slug}`} passHref>
             <Button
-              sx={{
-                color: '#3c982c',
-                textTransform: 'none', // Prevent uppercase
-              }}
+              sx={{ color: '#3c982c', textTransform: 'none' }}
               className="font-Nunito-Bold text-green-600 dark:text-yellow-400 text-lg leading-7 text-center"
             >
               Know more <ArrowForwardIcon sx={{ width: 20, height: 20 }} />
@@ -73,7 +69,6 @@ function Article({ article, currentYear }) {
   );
 }
 
-
 export default function Ideas({ articles, currentYear }) {
   return (
     <>
@@ -81,35 +76,41 @@ export default function Ideas({ articles, currentYear }) {
         <title>Idea List</title>
         <meta name="description" content="Idea List for GSOC" />
       </Head>
+
       <Container className="mt-20 mb-28">
         <div className="ideas-text flex items-center justify-center mb-8 relative">
-          <div
-            className="hidden md:block w-[75px] h-[75px] m-2 bg-cover bg-center dark:bg-[url('/logo.png')] bg-[url('/logo.png')] absolute left-10"
-            alt="GSOC Logo"
-          ></div>
 
+          {/* LEFT LOGO WITH ACCESSIBLE LABEL */}
+          <div
+            className="hidden md:block w-[75px] h-[75px] m-2 bg-cover bg-center absolute left-10
+              dark:bg-[url('/logo.png')] bg-[url('/logo.png')]"
+            role="img"
+            aria-label="AOSSIE open-source GSoC logo — circular design with a white code symbol"
+          ></div>
 
           <h1 className="font-mono text-6xl font-extrabold tracking-tighter text-[#32a852] dark:text-yellow-400 sm:text-5xl md:text-5xl lg:text-6xl text-center">
             IDEAS
           </h1>
 
+          {/* RIGHT LOGO WITH ACCESSIBLE LABEL */}
           <div
             className="hidden md:block w-[75px] h-[75px] m-2 bg-cover bg-center absolute right-10"
             style={{ backgroundImage: "url('/logo.png')" }}
-            aria-label="Logo"
+            role="img"
+            aria-label="AOSSIE open-source GSoC logo — circular design with a white code symbol"
           ></div>
 
         </div>
+
         <p className="font-mono text-lg leading-7 text-zinc-600 dark:text-zinc-400">
-          Explore the world of open-source possibilities with AOSSIE&apos;s{' '}
-          <b>Idea List</b>. As part of{' '}
-          <b>Google Summer of Code {currentYear}</b>, we offer
-          a unique opportunity for developers to explore new ideas, a wide
-          variety of projects for developers to choose from and contribute to.
-          From developing new features to fixing critical bugs, our idea list
-          is your go-to destination for finding your next big project and
-          kickstart your open-source journey.
+          Explore the world of open-source possibilities with AOSSIE&apos;s <b>Idea List</b>.
+          As part of <b>Google Summer of Code {currentYear}</b>, we offer
+          a unique opportunity for developers to explore new ideas, a wide variety of projects
+          to choose from and contribute to. From new features to fixing critical bugs, our idea
+          list is your destination for finding your next project and kickstarting your
+          open-source journey.
         </p>
+
         <Container.Inner>
           <div className="mt-10 flex justify-center sm:mt-20">
             <Grid container spacing={4} sx={{ justifyContent: 'center' }}>
