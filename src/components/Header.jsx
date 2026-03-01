@@ -230,7 +230,12 @@ function Home({ large = false, className, ...props }) {
       className={clsx(className, 'pointer-events-auto')}
       {...props}
     >
-      <Image src='/logo1.png' width={100} height={100} className='scale-125' alt="AOSSIE banner for Google Summer of Code projects" />
+      <Image 
+      src='/logo1.png' 
+      width={100} 
+      height={100}
+      className='scale-125 w-auto h-auto'
+      alt="AOSSIE banner for Google Summer of Code projects" />
     </Link>
   )
 }
@@ -353,8 +358,7 @@ export function Header() {
         />
         <div
           ref={headerRef}
-          className="top-0 z-10 h-16 pt-6"
-          style={{ position: 'var(--header-position)' }}
+          className="sticky top-0 z-50 h-16 pt-6 bg-white/90 backdrop-blur dark:bg-zinc-900/90"
         >
           <Container
             className="top-[var(--header-top,theme(spacing.6))] w-full"
@@ -362,11 +366,9 @@ export function Header() {
           >
             <div className="relative flex gap-4">
               <div className="flex flex-1">
-                {!isHomePage && (
                   <HomeContainer>
                     <Home />
                   </HomeContainer>
-                )}
               </div>
               <div className="flex flex-1 justify-end md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
