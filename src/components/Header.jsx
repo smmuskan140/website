@@ -358,7 +358,7 @@ export function Header() {
         />
         <div
           ref={headerRef}
-          className="sticky top-0 z-50 h-16 pt-6 bg-white/90 backdrop-blur dark:bg-zinc-900/90"
+          className="sticky top-0 z-50 h-16 pt-6 bg-transparent backdrop-blur-none dark:bg-transparent"
         >
           <Container
             className="top-[var(--header-top,theme(spacing.6))] w-full"
